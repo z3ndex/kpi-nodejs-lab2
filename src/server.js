@@ -43,12 +43,12 @@ server.on('clientError', (err, socket) => {
     socker.end('HTTP/1.1 400 Bad Request\r\n\r\n');
 });
 
-server.listen(parseInt(proccess.env.PORT) || 9000);
+server.listen(9000);
 
-proccess.on('SIGINT', () => {
+/*proccess.on('SIGINT', () => {
     server.close(error => {
         if (error) {
             proccess.exit(1);
         }
     });
-});
+});*/
